@@ -17,5 +17,8 @@ RUN rm -rf /var/www/html/*
 COPY index.html /var/www/html/
 COPY file.jfif /var/www/html/
 
+# Set ServerName directive
+RUN echo "ServerName 0.0.0.0" >> /etc/apache2/apache2.conf
+
 # Start Apache2 service
 CMD ["apachectl", "-D", "FOREGROUND"]
