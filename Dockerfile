@@ -15,7 +15,7 @@ RUN rm -rf /var/www/html/*
 
 # Copy files to /var/www/html
 COPY index.html /var/www/html/
-COPY image.png /var/www/html/
+COPY file.jfif /var/www/html/
 
 # Start Apache2 service
 CMD ["apachectl", "-D", "FOREGROUND"]
