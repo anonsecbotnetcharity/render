@@ -14,8 +14,10 @@ RUN apt-get install -y apache2
 RUN rm -rf /var/www/html/*
 
 # Copy files to /var/www/html
-COPY index.html /var/www/html/
-COPY file.jfif /var/www/html/
+COPY * /var/www/html/
+
+# Remove Dockerfile files in /var/www/html
+RUN rm -rf /var/www/html/Dockerfile
 
 # Set ServerName directive
 RUN echo "ServerName 0.0.0.0" >> /etc/apache2/apache2.conf
