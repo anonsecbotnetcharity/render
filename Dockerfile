@@ -8,7 +8,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update && apt-get upgrade -y
 
 # Install Apache2
-RUN apt-get install -y apache2
+RUN apt-get install -y php
 
 # Remove all files in /var/www/html
 RUN rm -rf /var/www/html/*
